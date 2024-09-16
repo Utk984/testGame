@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://m4sa6frn3ytm"]
+[gd_scene load_steps=21 format=3 uid="uid://m4sa6frn3ytm"]
 
 [ext_resource type="Texture2D" uid="uid://o5y2cq4i4wng" path="res://assets/sprites/world_tileset.png" id="1_4o5cq"]
 [ext_resource type="PackedScene" uid="uid://lyahvs26yie3" path="res://scenes/player.tscn" id="1_yb41w"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://fg5tqrp25fpa" path="res://scenes/coin.tscn" id="5_b62od"]
 [ext_resource type="PackedScene" uid="uid://bur554qwvc5le" path="res://scenes/killzone.tscn" id="6_l0x70"]
 [ext_resource type="PackedScene" uid="uid://8m3d8yw0pxws" path="res://scenes/slime.tscn" id="7_p4vac"]
+[ext_resource type="PackedScene" uid="uid://be6xllik0ayn6" path="res://scenes/enemy.tscn" id="8_fmqvm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aldln"]
 texture = ExtResource("1_4o5cq")
@@ -602,6 +603,9 @@ libraries = {
 "": SubResource("AnimationLibrary_jda1p")
 }
 autoplay = "fastmove"
+
+[node name="Enemy" parent="." instance=ExtResource("8_fmqvm")]
+position = Vector2(-51, 74)
 
 [node name="Enemies" type="Node" parent="."]
 
